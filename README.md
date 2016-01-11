@@ -34,9 +34,6 @@ The different elements of the project have been separated into several folders. 
 	Data ingestion and organization scripts and methods.
 
 *	*presentation*<br>
-	Methods to facilitate statistical genome analysis using the PLINK utility.  (Results to be implemented into the data at a later point.)
-
-*	*learn*<br>
-	Machine learning support for the core module.
+	Power point presentation of results.
 
 
