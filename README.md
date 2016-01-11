@@ -11,7 +11,7 @@ An agricultural drone takes snapshots of a field during its flight to categorize
 *Nancy Abramson*<br>
 [nabramson@ieee.org](mailto:nabramson@ieee.org)<br>
 in/nancy.abramson
-github.com/NancyAb<br>
+github.com/nwabramson<br>
 January 2016
 
 ### Overview
