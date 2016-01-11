@@ -24,7 +24,7 @@ This project aims to
 
 ### A Machine Learning Framework for Predicting Drone Picture Quality
 
-[Machine Learning Framework - Overview](presentation/process.PNG "Title")
+![Machine Learning Framework - Overview](presentation/process.PNG "Title")
 
 ### Folder Contents
 
