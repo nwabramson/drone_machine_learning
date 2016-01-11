@@ -22,20 +22,10 @@ Each of the 593 binary files that I recieved is a record of a drone flight. Each
 
 This project aims to
 
-* provide a tool to read the flight and predict the picture quality remotely, 
+* provide a tool to read the flight and predict the picture quality remotely
 * apply machine learning techniques to provide insight on drone performance and picture quality.
 
-### A Machine Learning Framework for PD
-
-As mentioned, one of the purposes of the project is to open up the insights yielded by machine learning to experts in the field of Parkinson's disease, few of which are practicioners of data science.  To facilitate access to these individuals, the analysis of the data using machine learning and interpretation of the results should be intuitive, and hide the technical complexity of the process.  
-
-This philosophy is implemented in a three stage design.  PPMI data is available from a central web repository, but comes in form of many individual files containing various assessments; the files also differ slightly in their format.  The framework contains a 'backend' or import module to collect this data:  After some processing, the data is stored in a three-dimensional object, indexed by the timeline (many assessments are repeatedly performed in the study), subject ID, and the test modality itself.  Selecting available data requires familiarity with the study protocol, and is handled using a script.
-
-The data object is available to the statistics core module which handles data selection and slicing, simple statistics protocols, and all the correpondence with the 'frontend' that interfaces with the user.  The core also contains the machine learning unit, and hands rendering jobs to the graphics module.  (Some new display options, particularly suitable for PPMI data, have been developed for this project.)
-
-The 'frontend' is a graphical interface, e.g. a web browser, that lets the user select particular PPMI datasets, suggests modes of analysis, and displays the results in strictly graphical form.  (To keep operation simple, no numerical data is transmitted.)  Although the communication protocol between core and frontend is already fixed, coding the GUI itself remains a work in progress.
-
-The structure of the ML framework is depicted schematically below:
+### A Machine Learning Framework for Predicting Drone Picture Quality
 
 ![Machine Learning Framework - Overview](PD-Learn Presentation/mlframework.jpg "Title")
 
