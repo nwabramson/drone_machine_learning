@@ -33,22 +33,13 @@ This project aims to
 
 The different elements of the project have been separated into several folders.  A quick overview is below; detailed information can be found in each folder.
 
-*	*PPMI Backend*<br>
+*	*code*<br>
 	Data ingestion and organization scripts and methods.
 
-*	*PPMI Genetics*<br>
+*	*presentation*<br>
 	Methods to facilitate statistical genome analysis using the PLINK utility.  (Results to be implemented into the data at a later point.)
 
-*	*PPMI Graphics Library*<br>
-	Methods to render one- and two-dimensional data plots as .png images.
-
-*	*PPMI Learn*<br>
+*	*learn*<br>
 	Machine learning support for the core module.
-
-*	*PPMI Statistics Core*<br>
-	Elements of the module responsible for data selection and analysis, communication with the user interface.
-
-*	*PD-Learn Presentation*<br>
-	A brief presentation of the project, including some preliminary findings.
 
 
