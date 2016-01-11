@@ -1,10 +1,7 @@
-# drone_machine_learning
-Using mavlogdump drone telemetry time series logs to predict the quality of pictures during a flight.
-
 Real Time Picture Quality Prediction from an Agricultural Drone Flight Logs
 ===========================================================================
 
-An agricultural drone takes snapshots of a field during its flight to categorize crop quality. The quality of the picture is influenced by the smoothness of the flight which is reflected in the drone's time series telemetry logs. Using these logs and blending in third party forecast.io weather data, predictive models were compared to find the best predictor for flight's quality score. The resulting model can be used in the field to allow for another re-run of the flight.  Currently the pilot needs to wait for the data to be uploaded and manually scored at another site. If the flight needs to be re-run, the pilot returns to the site the next day and re-launches.
+An agricultural drone takes snapshots of a field during its flight to categorize crop quality. The quality of the picture is influenced by the smoothness of the flight which is reflected in the drone's time series telemetry mavlogdump logs. Using these logs and blending in third party forecast.io weather data, predictive models were compared to find the best predictor for flight's quality score. The resulting model can be used in the field to allow for another re-run of the flight.  Currently the pilot needs to wait for the data to be uploaded and manually scored at another site. If the flight needs to be re-run, the pilot returns to the site the next day and re-launches.
 
 ### Author
 
