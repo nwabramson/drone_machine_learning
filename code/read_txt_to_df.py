@@ -1,9 +1,7 @@
 import os
 import pandas as pd
 from os.path import isfile, join
-#import matplotlib.pyplot as plt
 import re
-
 
 def read_txt_to_df(directory):
     '''
@@ -11,10 +9,8 @@ def read_txt_to_df(directory):
     output dataframe
     '''
     
-    mission = directory[:4]
-    quality = directory[-1:]
     cwd =  os.getcwd()
-    os.chdir("files/" + directory)
+    os.chdir("../data/" + directory)
     datafiles = os.listdir(".")
 
     df = pd.DataFrame()
@@ -30,12 +26,12 @@ def read_txt_to_df(directory):
         # no good data so stub in values for bad data
 
         os.chdir(cwd)
-        file_name = "missions/" + str(mission) + "_" + str(quality) + ".log"
+        file_name = "missions/" + directory + ".log"
         line = open(file_name).next()
         date = line[:10]
         time = line[11:22]
-        df = pd.DataFrame(columns=['date', 'time', 'mission', 'quality'])
-        df.loc[0] = [date, time, mission, quality]
+        df = pd.DataFrame(columns=['date', 'time'])
+        df.loc[0] = [date, time]
 
     os.chdir(cwd)
 
@@ -125,17 +121,6 @@ def show_timeseries(dfm1, dfm2, dfm3, dfm4, dfm5, cols, num_rows=4):
     plt.tight_layout()
     plt.show()
 
-def write_mission_csv(mission, quality):
-
-    dir_name = str(mission)+"_" +str(quality)
-    df1 = pd.DataFrame()
-    df1 = read_txt_to_df(dir_name)
-    df1 = add_flight_duration(df1)
-    df1 = clean_columns(df1)
-    df1.to_csv("data/"+dir_name+".csv")
-
-    return
-
 def show_timeseries2(dfm1, dfm2, cols, num_rows=4):
     start_col = 0
     total = num_rows**2
@@ -172,3 +157,17 @@ def show_timeseries2(dfm1, dfm2, cols, num_rows=4):
     plt.tight_layout()
     plt.show()
 
+def write_mission_csv(dir_name):
+
+    df1 = pd.DataFrame()
+    df1 = read_txt_to_df(dir_name)
+    df1 = add_flight_duration(df1)
+    df1 = clean_columns(df1)
+    df1.to_csv("../data/"+dir_name+".csv")
+
+    return
+
+if __name__ == '__main__':
+
+    dir_name = os.sys.argv[1]
+    write_mission_csv(dir_name)
